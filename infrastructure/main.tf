@@ -29,3 +29,17 @@ resource "azurerm_storage_blob" "website" {
   source               = "../index.html"
   content_type         = "text/html"
 }
+
+resource "azurerm_storage_account" "terraform_state" {
+  name                     = "sttfstateazuredevops1"
+  resource_group_name      = azurerm_resource_group.project.name
+  location                 = azurerm_resource_group.project.location
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_container" "terraform_state" {
+  name                  = "tfstate"
+  storage_account_id    = azurerm_storage_account.terraform_state.id
+  container_access_type = "private"
+}
