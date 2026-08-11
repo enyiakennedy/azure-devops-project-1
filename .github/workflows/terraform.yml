@@ -50,3 +50,17 @@ jobs:
       - name: Terraform Apply
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve tfplan
+
+      - name: Deploy Website
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          az storage blob upload \
+            --account-name stazuredevopsproject1 \
+            --container-name '$web' \
+            --name index.html \
+            --file ../index.html \
+            --auth-mode login \
+            --overwrite
+
+
+
