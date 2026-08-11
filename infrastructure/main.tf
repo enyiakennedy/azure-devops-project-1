@@ -22,13 +22,6 @@ data "azurerm_storage_container" "web" {
   storage_account_id = azurerm_storage_account.project.id
 }
 
-resource "azurerm_storage_blob" "website" {
-  name                 = "index.html"
-  storage_container_id = data.azurerm_storage_container.web.id
-  type                 = "Block"
-  source               = "../index.html"
-  content_type         = "text/html"
-}
 
 resource "azurerm_storage_account" "terraform_state" {
   name                     = "sttfstateazuredevops1"
