@@ -1,4 +1,27 @@
+![Terraform](https://img.shields.io/badge/Terraform-IaC-623CE4?logo=terraform&logoColor=white)
+
+![Azure](https://img.shields.io/badge/Microsoft-Azure-0078D4?logo=microsoftazure&logoColor=white)
+
+![GitHub Actions](https://img.shields.io/badge/GitHub-Actions-2088FF?logo=githubactions&logoColor=white)
+
 # Azure Static Website Deployment on Microsoft Azure using Terraform & GitHub Actions
+
+
+## 📑 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+- [Technologies Used](#️-technologies-used)
+- [Architecture](#-architecture)
+- [CI/CD Workflow](#-cicd-workflow)
+- [Security](#-security)
+- [Repository Structure](#-repository-structure)
+- [Live Demo](#-live-demo)
+- [Lessons Learned](#-lessons-learned)
+- [Future Improvements](#-future-improvements)
+- [Screenshots](#-screenshots)
+- [Author](#-author)
+
 
 ## 📖 Project Overview
 
@@ -151,20 +174,21 @@ Possible enhancements for this project include:
 - Add automated testing to the deployment pipeline
 - Expand the static website into a containerized application deployed with Docker
 
+
 ## 📸 Screenshots
 
 ### GitHub Actions Pipeline
 
-> *(Insert a screenshot of a successful GitHub Actions workflow.)*
+![GitHub Actions](images/github-actions-success.png)
 
 ---
 
-### Terraform Deployment
+### Azure Static Website
 
-> *(Insert a screenshot showing a successful `terraform apply` or `terraform plan` execution.)*
+![Azure Static Website](images/azure-static-website.png)
 
 ---
 
 ### Live Website
 
-> *(Insert a screenshot of the deployed Azure Static Website.)*
+![Live Website](images/live-website.png)
